@@ -34,7 +34,6 @@ save.addEventListener("click", function(){
     }
 })
 
-
 male.addEventListener("click",function(){
     let y = arr.filter(y => y.gender == "male")
     console.log(y)
