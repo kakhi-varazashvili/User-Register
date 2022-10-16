@@ -8,6 +8,7 @@ let date = document.querySelector(".date")
 let gender = document.querySelector(".gender")
 let male = document.querySelector(".male")
 let female = document.querySelector(".female")
+let user = document.querySelector(".user")
 let arr = JSON.parse(localStorage.getItem("users")) || []
 save.addEventListener("click", function(){
     let ind = arr.findIndex(x=> x.email == email.value)
@@ -42,6 +43,20 @@ female.addEventListener("click",function(){
     let y = arr.filter(y => y.gender == "female")
     console.log(y)
 })
+
+
+
+user.addEventListener("click",function(){
+    // let max = 0;
+    let x = arr.map(x => x.bday.getFullYear());
+    // let bdayYear = x.getFullYear();
+    // let today = new Date().getFullYear()
+    // let y = x.filter(y => y.x == today)
+    console.log(x)
+})
+
+
+
 
 clear.addEventListener("click", function(){
     localStorage.clear()
